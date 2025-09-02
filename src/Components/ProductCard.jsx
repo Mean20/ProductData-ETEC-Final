@@ -55,7 +55,7 @@ const ProductCard = ({ product }) => {
           e.stopPropagation(); // ✅ prevent opening detail modal when clicking button
           addToCart();
         }}
-        className="rounded-md bg-gray-900 w-full text-white flex items-center justify-center gap-5 py-2 hover:bg-gray-800 cursor-pointer"
+        className="rounded-md bg-purple-950 w-full text-white flex items-center justify-center gap-5 py-2 hover:bg-purple-900 cursor-pointer"
       >
         <i className="bx bx-cart text-xl"></i>
         Add To Cart

@@ -39,14 +39,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-white py-3 shadow-lg fixed top-0 left-0 right-0 z-10">
+    <div className="bg-purple-950 py-3 shadow-2xs fixed top-0 left-0 right-0 z-10">
       <div className="w-[1200px] m-auto flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <i className="bx bxs-store text-4xl text-blue-600"></i>
-          <h1 className="text-2xl font-bold">Shop</h1>
+          <i className="bx bxs-store text-4xl text-white"></i>
+          <h1 className="text-2xl font-bold text-white">Shop</h1>
         </div>
-        <button onClick={() => setIsOpen(true)} className='text-gray-800 hover:bg-slate-100 flex items-center gap-3 border-gray-400 px-4 py-1 rounded-md border cursor-pointer'>
-          <i class="bx bxs-shopping-bag text-lg"></i>
+        <button onClick={() => setIsOpen(true)} className='text-white hover:bg-purple-900 flex items-center gap-3 border-white px-4 py-1 rounded-md border cursor-pointer'>
+          <i class="bx bxs-shopping-bag text-lg text-white"></i>
           Cart
         </button>
         {isOpen && (
@@ -55,16 +55,16 @@ const Navbar = () => {
               <button onClick={() => setIsOpen(false)} className="absolute right-3 top-3">
                 <i className="bx bx-x text-xl"></i>
               </button>
-              <h2 className="text-2xl font-semibold">
+              <h2 className="text-2xl font-semibold text-purple-950">
                 Shopping Cart ({carts.length} {carts.length === 1 ? "item" : "items"})
               </h2>
 
               {carts.length === 0 ? (
                 <div className="flex flex-col items-center justify-center mt-10">
-                  <p className="text-gray-500">Your cart is empty</p>
+                  <p className="text-purple-900">Your cart is empty</p>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="mt-4 border text-white bg-black px-5 py-2 rounded hover:bg-zinc-800 cursor-pointer"
+                    className="mt-4 border text-white bg-purple-950 px-5 py-2 rounded hover:bg-purple-900 cursor-pointer"
                   >
                     Continue Shopping
                   </button>
@@ -75,7 +75,7 @@ const Navbar = () => {
                     {carts.map((product) => (
                       <div
                         key={product.id}
-                        className="flex items-center justify-between gap-5 border border-gray-300 p-3 rounded"
+                        className="flex items-center justify-between gap-5 border border-purple-950 p-3 rounded"
                       >
                         <div className="flex items-center gap-3">
                           <img className="w-[70px]" src={product.image} alt="" />
@@ -115,10 +115,10 @@ const Navbar = () => {
                     ))}
                   </div>
                   <div className="mt-5 border-t py-3">
-                    <h1 className="text-2xl font-bold">Total: ${total.toFixed(2)}</h1>
+                    <h1 className="text-2xl font-bold text-purple-950">Total: ${total.toFixed(2)}</h1>
                     <button
                       onClick={() => setCarts([])}
-                      className="mt-2 w-full bg-gray-900 py-2 text-white rounded-md cursor-pointer hover:bg-gray-800"
+                      className="mt-2 w-full bg-purple-950 py-2 text-white rounded-md cursor-pointer hover:bg-purple-900"
                     >
                       Checkout
                     </button>

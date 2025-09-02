@@ -26,7 +26,7 @@ const Product = () => {
               onClick={() => setActiveCategory(cat)}
               className={`text-lg px-5 py-2 border rounded-md cursor-pointer ${
                 activeCategory === cat
-                  ? "bg-black text-white border-black"
+                  ? "bg-purple-950 text-white border-black"
                   : "hover:bg-slate-200 border-gray-300"
               }`}
             >

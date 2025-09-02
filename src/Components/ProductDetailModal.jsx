@@ -41,21 +41,21 @@ const ProductDetailModal = () => {
             {"⭐".repeat(4)} <span className="text-gray-400 ml-1"> (4.3)</span>
           </div>
 
-          <h2 className="text-2xl font-bold mt-2">{selectedProduct.name}</h2>
-          <p className="text-gray-600 mt-1">{selectedProduct.description}</p>
-          <p className="text-green-600 text-2xl font-semibold mt-2">
+          <h2 className="text-2xl font-bold mt-2 text-purple-950">{selectedProduct.name}</h2>
+          <p className="text-purple-900 mt-1">{selectedProduct.description}</p>
+          <p className="text-pink-500 text-2xl font-semibold mt-2">
             ${selectedProduct.price}
           </p>
 
           {/* Category Tag */}
-          <span className="inline-block bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-full mt-2">
+          <span className="inline-block bg-gray-100 text-purple-900 text-sm px-3 py-1 rounded-full mt-2">
             {selectedProduct.category || "General"}
           </span>
 
           {/* Product Details */}
           <div className="mt-4">
-            <h3 className="font-semibold">Product Details</h3>
-            <ul className="mt-2 text-gray-600 text-sm space-y-1">
+            <h3 className="font-semibold text-purple-950">Product Details</h3>
+            <ul className="mt-2 text-purple-900 text-sm space-y-1">
               <li className="flex justify-between">
                 <span className="font-medium">Brand:</span>{" "}
                 {selectedProduct.brand || "N/A"}
@@ -77,17 +77,17 @@ const ProductDetailModal = () => {
 
           {/* Quantity Selector */}
           <div className="flex items-center mt-4">
-            <span className="mr-3 font-medium">Quantity:</span>
+            <span className="mr-3 font-medium text-purple-950">Quantity:</span>
             <button
-              className="px-3 py-1 border rounded-l disabled:opacity-50"
+              className="px-3 py-1 border rounded-l disabled:opacity-50 text-purple-900"
               onClick={() => setQuantity(Math.max(1, quantity - 1))}
               disabled={quantity <= 1}
             >
               −
             </button>
-            <span className="px-4 py-1 border-t border-b">{quantity}</span>
+            <span className="px-4 py-1 border-t border-b  text-purple-900">{quantity}</span>
             <button
-              className="px-3 py-1 border rounded-r"
+              className="px-3 py-1 border rounded-r text-purple-900"
               onClick={() => setQuantity(quantity + 1)}
             >
               +
@@ -97,7 +97,7 @@ const ProductDetailModal = () => {
           {/* Add to Cart Button */}
           <button
             onClick={addToCart}
-            className="mt-6 w-full bg-black text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-800 transition"
+            className="mt-6 w-full bg-purple-950 text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-purple-900 transition"
           >
             🛒 Add {quantity} to Cart – ${(
               selectedProduct.price * quantity

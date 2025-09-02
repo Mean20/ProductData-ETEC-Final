@@ -3,7 +3,7 @@ import React from 'react'
 const ContactUs = () => {
   return (
     <>
-      <div className="bg-gray-900 text-gray-400 mt-20 py-10">
+      <div className="bg-purple-950 text-gray-400 mt-20 py-10">
         <div className='columns-4 px-40 justify-around gap-20'>
           {/* shophub */}
           <div className="leading-relaxed">
@@ -41,7 +41,7 @@ const ContactUs = () => {
             </ul>
           </div>
         </div>
-        <hr className='border-t ms-40 border-gray-700 mt-5 w-[1200px] text-center' />
+        <hr className='border-t ms-40 border-purple-900 mt-5 w-[1200px] text-center' />
         <p className='text-center mt-5 pb-10'>© 2024 ShopHub. All rights reserved.</p>
       </div>
     </>
